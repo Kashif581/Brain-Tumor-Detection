@@ -22,24 +22,24 @@
 
 # <a id='intro'>1. Project Overview and Objectives</a>
 
-The main purpose of this project was to build a CNN model that would classify if subject has a tumor or not base on MRI scan. I used the [VGG-16](https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection) model architecture and weights to train the model for this binary problem. I used `accuracy` as a metric to justify the model performance which can be defined as:
+The main purpose of this project was to build a CNN model that would classify if the subject has a tumor or not based on an MRI scan. I used the [VGG-16](https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection) model architecture and weights to train the model for this binary problem. I used `accuracy` as a metric to justify the model performance which can be defined as:
 
 $\textrm{Accuracy} = \frac{\textrm{Number of correclty predicted images}}{\textrm{Total number of tested images}} \times 100\%$
 
-Final results look as follows:
+The final results look as follows:
 
 | Set | Accuracy |
 |:-:|:-:|
 | Validation Set* | ~88% |
 | Test Set* | ~80% |
 <br>
-Note: there might be some misunderstanding in terms of set names so I want to describe what do I mean by `test` and `validation` set:
+Note: there might be some misunderstanding in terms of set names so I want to describe what I mean by `test` and `validation` set:
 `validation set` - is the set used during the model training to adjust the hyperparameters. 
-`test set` - is the small set that I don't touch for the whole training process at all. It's been used for final model performance evaluation.
+`test set` - is the small set that I don't touch for the whole training process at all. It's been used for the final model performance evaluation.
 
 ## <a id='dataset'>1.1. Data Set Description</a>
 
-The image data that was used for this problem is [Brain MRI Images for Brain Tumor Detection](https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection). It conists of MRI scans of two classes:
+The image data that was used for this problem is [Brain MRI Images for Brain Tumor Detection](https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection). It consists of MRI scans of two classes:
 
 * `NO` - no tumor, encoded as `0`
 * `YES` - tumor, encoded as `1`
@@ -62,23 +62,27 @@ I was using [Transfer Learning](https://towardsdatascience.com/keras-transfer-le
 
 ## <a id='aug'>4.1. Data Augmentation</a>
 
-Since I had small data set I used the technique called [Data Augmentation](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html) which helps to "increase" the size of training set.
+Since I had small data set I used the technique called [Data Augmentation](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html) which helps to "increase" the size of the training set.
 
 ### <a id='demo'>4.1.1. Demo</a>
 
-That's the example from one image how does augmentation look like.
+That's the example from one image of what augmentation looks like.
 
-![download](https://github.com/user-attachments/assets/7e2c7003-f70f-47ad-8b04-3ef583642183)
-![download (1)](https://github.com/user-attachments/assets/9b7610f7-5ab7-4be7-8f6f-d721084ee7b2)
+![download](https://github.com/user-attachments/assets/960b50b5-c30e-4a9c-bfd4-ea935b9ea65d)
+
+![download (1)](https://github.com/user-attachments/assets/00763f43-a1f8-4324-a79c-defdf62a7235)
+
 
 ## <a id='build'>4.2. Model Building</a>
-<img width="386" alt="Capture" src="https://github.com/user-attachments/assets/410657fe-a7ca-4907-ac2e-09f2665c46d6" />
+<img width="386" alt="Capture" src="https://github.com/user-attachments/assets/a6208b2d-80cb-4c53-970a-e207bc2dcb10" />
+
 
 
 ## <a id='perf'>4.3. Model Performance</a>
-![download (2)](https://github.com/user-attachments/assets/80ab3778-9076-4d68-b0e3-b83093757709)
+![download (2)](https://github.com/user-attachments/assets/a1052c8d-799a-497e-aeba-976ac2bc400f)
+
 
 
 # <a id='concl'>5. Conclusions</a>
 
-This project was a combination of CNN model classification problem (to predict wheter the subject has brain tumor or not) & Computer Vision problem (to automate the process of brain cropping from MRI scans). The final accuracy is much higher than 50% baseline (random guess). However, it could be increased by larger number of train images or through model hyperparameters tuning.
+This project was a combination of CNN model classification problem (to predict whether the subject has a brain tumor or not) & Computer Vision problem (to automate the process of brain cropping from MRI scans). The final accuracy is much higher than 50% baseline (random guess). However, it could be increased by larger number of train images or through model hyperparameter tuning.
